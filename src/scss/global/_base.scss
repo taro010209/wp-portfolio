@@ -1,0 +1,11 @@
+@use '../mixin';
+
+body {
+  background-color: var(--color-base);
+  color: var(--color-main);
+  font-family: var(--font-family-ja), sans-serif;
+}
+
+main.main {
+  margin-top: 80px;
+}

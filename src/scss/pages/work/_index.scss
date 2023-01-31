@@ -1,0 +1,120 @@
+@use '../../mixin';
+
+// -------------------- 作品名 --------------------
+.work__heading {
+  font-weight: 700;
+  @include mixin.text(30px, 1.6, center);
+  text-align: center;
+  @include mixin.mq('tab') {
+    font-size: 44px;
+  }
+  @include mixin.mq('pc') {
+    font-size: 60px;
+  }
+}
+// -------------------- デバイスモック --------------------
+.work__firstview {
+  padding: 0 var(--container-padding);
+  @include mixin.mq('tab') {
+    padding: 0 50px;
+  }
+  @include mixin.mq('pc') {
+    max-width: var(--container-width);
+    margin: 0 auto;
+  }
+}
+// -------------------- リンク --------------------
+.work__firstview .wp-element-caption {
+  width: fit-content;
+  margin: 4px 16px 0;
+}
+.work__firstview .wp-element-caption a {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  align-items: center;
+  justify-content: start;
+  gap: 0 6px;
+  font-family: var(--font-family-en), sans-serif;
+  @include mixin.text(16px, 1.6, left);
+  text-decoration: underline;
+  overflow-wrap: break-word;
+  word-break: break-all;
+  position: relative;
+  transition: color var(--transition-config);
+  &::before {
+    content: '';
+    display: block;
+    width: 18px;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  &:first-of-type {
+    &::before {
+      height: 10px;
+      background-image: url(../img/work/icon_link.svg);
+    }
+  }
+  &:last-of-type {
+    margin-top: 6px;
+    &::before {
+      height: 14px;
+      background-image: url(../img/work/icon_code.svg);
+    }
+  }
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      color: var(--color-accent);
+    }
+  }
+}
+// -------------------- テキスト群 --------------------
+.summary {
+  margin-top: 60px;
+}
+.summary__container {
+  padding: 0 var(--container-padding);
+  @include mixin.mq('pc') {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 80px;
+  }
+}
+.summary__each {
+  &:not(:first-of-type) {
+    margin-top: 40px;
+  }
+}
+.summary__name {
+  @include mixin.text(24px);
+}
+.summary__lead {
+  margin-top: 10px;
+  @include mixin.text(16px);
+}
+.summary__lead--tech {
+  font-family: var(--font-family-en), sans-serif;
+  overflow-wrap: break-word;
+}
+// -------------------- スクリーンショット --------------------
+// 単一画像
+.wp-block-image.work__screen {
+  max-width: var(--container-width);
+  margin: 60px auto 0;
+}
+// 複数画像
+.work__screen {
+  margin-top: 60px;
+}
+.wp-block-group__inner-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 var(--container-padding);
+  @include mixin.mq('pc') {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 80px;
+  }
+}
+.work__img {
+  width: 48%;
+}

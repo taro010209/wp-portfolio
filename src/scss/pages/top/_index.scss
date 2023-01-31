@@ -1,0 +1,30 @@
+@use '../../mixin';
+@use 'works';
+@use 'about';
+@use 'skill';
+
+.section_heading {
+  display: flex;
+  align-items: center;
+  span {
+    &:first-of-type {
+      font-family: var(--font-family-en), sans-serif;
+      font-size: 36px;
+      line-height: 1;
+      text-align: left;
+      text-transform: uppercase;
+      @include mixin.mq('pc') {
+        font-size: 42px;
+      }
+    }
+    &:last-of-type {
+      margin-left: 6px;
+      font-size: 18px;
+      line-height: 1;
+      text-align: left;
+      @include mixin.mq('pc') {
+        font-size: 20px;
+      }
+    }
+  }
+}

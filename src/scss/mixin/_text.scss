@@ -1,0 +1,17 @@
+@mixin text($fontSize, $lineHeight: 1.6, $textAlign: left) {
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  letter-spacing: 0.06em;
+  text-align: $textAlign;
+}
+
+@mixin textIcon($fontSize) {
+  font-size: $fontSize;
+  display: inline-block;
+  padding: 6px 10px;
+  border: 1px solid var(--color-main);
+  border-radius: var(--border-radius);
+  line-height: 1;
+  letter-spacing: 0.06em;
+  text-align: center;
+}

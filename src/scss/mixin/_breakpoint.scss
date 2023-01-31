@@ -1,0 +1,19 @@
+$tab-width: 768px;
+$pc-width: 1024px;
+
+$breakpoints: (
+  'tab': 'screen and (min-width: #{$tab-width})',
+  'pc': 'screen and (min-width: #{$pc-width})',
+) !default;
+
+@mixin mq($breakpoint: tab) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin mq($breakpoint: pc) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}

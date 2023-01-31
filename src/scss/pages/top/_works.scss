@@ -1,0 +1,10 @@
+@use '../../mixin';
+
+// -------------------- WORKS --------------------
+.works__container {
+  padding: 0 var(--container-padding);
+  @include mixin.mq('pc') {
+    max-width: var(--container-width);
+    margin: 0 auto;
+  }
+}

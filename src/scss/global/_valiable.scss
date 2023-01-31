@@ -1,0 +1,22 @@
+@use '../mixin';
+
+:root {
+  --font-family-en: 'Josefin Sans';
+  --font-family-ja: 'Zen Kaku Gothic New';
+  --color-base: #fafafa;
+  --color-main: #222;
+  --color-accent: #0a6bd6;
+  --section-margin: 100px;
+  --border-radius: 2px;
+  --container-width: 960px;
+  --container-padding: 15px;
+  --transition-config: 0.4s ease-out;
+  @include mixin.mq('tab') {
+    --section-margin: 130px;
+    --container-padding: 70px;
+  }
+  @include mixin.mq('pc') {
+    --section-margin: 160px;
+    --container-padding: 0px;
+  }
+}

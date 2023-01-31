@@ -1,0 +1,59 @@
+@use '../mixin';
+
+// -------------------- works_wrapper --------------------
+.works_wrapper {
+  margin-top: 30px;
+  @include mixin.mq('tab') {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+  @include mixin.mq('pc') {
+    gap: 60px;
+  }
+}
+.works_wrapper__each {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  overflow: hidden;
+  &:not(:first-of-type) {
+    margin-top: 40px;
+    @include mixin.mq('tab') {
+      margin-top: 0;
+    }
+  }
+  &:hover {
+    .works_wrapper__name {
+      @media (hover: hover) and (pointer: fine) {
+        color: var(--color-accent);
+      }
+    }
+    .works_wrapper__thumbnail img {
+      @media (hover: hover) and (pointer: fine) {
+        transform: scale(1.04);
+      }
+    }
+  }
+}
+.works_wrapper__link {
+  display: grid;
+  justify-items: start;
+}
+.works_wrapper__thumbnail {
+  width: 100%;
+  overflow: hidden;
+}
+.works_wrapper__thumbnail img {
+  transition: transform var(--transition-config);
+}
+.works_wrapper__body {
+  width: 100%;
+  padding: 10px 20px 20px;
+}
+.works_wrapper__category {
+  @include mixin.textIcon(14px);
+}
+.works_wrapper__name {
+  margin-top: 6px;
+  transition: color var(--transition-config);
+}
