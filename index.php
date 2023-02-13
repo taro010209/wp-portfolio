@@ -60,7 +60,7 @@
         </h2>
         <p class="skill__lead">
           前職では1年半程度、サイトの制作や改修のほか、進行管理などに携わりました。<br>
-          HTML,CSS,JavaScriptを用いた静的ページ制作、スケジュールや品質の管理が可能です。
+          HTML,CSS,JavaScriptを用いたサイト制作、スケジュールや品質の管理が可能です。
         </p>
         <dl class="skill_wrapper">
           <?php
