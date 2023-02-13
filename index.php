@@ -27,7 +27,7 @@
       <div class="about__container">
         <h2 id="about" class="about__heading section_heading">
           <span class="section_heading__en">about</span>
-          <span class="section_heading__ja">僕について</span>
+          <span class="section_heading__ja">私について</span>
         </h2>
         <div class="profile_wrapper">
           <div class="profile_wrapper__visual">
