@@ -1,9 +1,10 @@
 {
   "scripts": {
-    "sass:sass": "sass ./src/scss:./assets/css --style expanded --no-source-map",
-    "sass:shaping": "postcss ./assets/css/style.css --use postcss-sort-media-queries postcss-combine-duplicated-selectors autoprefixer cssnano -o ./assets/css/style.css -c ./postcss.config.js -map",
-    "css": "npm-run-all -s sass:*",
-    "watch": "watch 'npm run css' ./src/scss"
+    "build:style": "postcss ./assets/css/style.css --use postcss-sort-media-queries postcss-combine-duplicated-selectors autoprefixer cssnano -o ./assets/css/style.css -c ./postcss.config.js -map",
+    "build:work": "postcss ./assets/css/work.css --use postcss-sort-media-queries postcss-combine-duplicated-selectors autoprefixer cssnano -o ./assets/css/work.css -c ./postcss.config.js -map",
+    "allBuild": "npm-run-all -s build:*",
+    "scss": "sass ./src/scss:./assets/css --style expanded --no-source-map",
+    "watch": "watch 'npm run scss' ./src/scss"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",
