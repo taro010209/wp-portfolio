@@ -15,9 +15,9 @@ get_header();
       margin-top: 0;
     }
   </style>
-  <h1 style="font-size: 160px;">404</h1>
+  <h1 style="font-size: 160px;color: var(--color-blue);">404</h1>
   <p style="margin-top: -20px;">ページが見つかりませんでした</p>
-  <a href="<?php echo esc_url( home_url( '/' ) ); ?>" style="width: fit-content;margin: 20px auto 0;padding: 10px 30px;border-radius: var(--border-radius);background-color: var(--color-main);color: var(--color-base);">トップへ戻る</a>
+  <a href="<?php echo esc_url( home_url( '/' ) ); ?>" style="width: fit-content;margin: 20px auto 0;padding: 10px 30px;border-radius: var(--border-radius);background-color: var(--color-blue);color: var(--color-white);">トップへ戻る</a>
 </main>
 
 <?php

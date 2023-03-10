@@ -1,13 +1,15 @@
 @use '../mixin';
 
 :root {
+  --font-family-ja: 'Noto Sans JP';
   --font-family-en: 'Josefin Sans';
-  --font-family-ja: 'Zen Kaku Gothic New';
-  --color-base: #fafafa;
-  --color-main: #222;
-  --color-accent: #0a6bd6;
+  --color-white: #fff;
+  --color-black: #222;
+  --color-gray: #f0f0f0;
+  --color-light-blue: #f4f8fa;
+  --color-blue: #344c79;
   --section-margin: 100px;
-  --border-radius: 2px;
+  --border-radius: 12px;
   --container-width: 960px;
   --container-padding: 15px;
   --transition-config: 0.4s ease-out;

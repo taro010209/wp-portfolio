@@ -13,7 +13,6 @@
   }
 }
 .works_wrapper__each {
-  border: 1px solid #ccc;
   border-radius: 4px;
   overflow: hidden;
   &:not(:first-of-type) {
@@ -25,7 +24,7 @@
   &:hover {
     .works_wrapper__name {
       @media (hover: hover) and (pointer: fine) {
-        color: var(--color-accent);
+        text-decoration: underline;
       }
     }
     .works_wrapper__thumbnail img {
@@ -47,13 +46,15 @@
   transition: transform var(--transition-config);
 }
 .works_wrapper__body {
-  width: 100%;
-  padding: 10px 20px 20px;
+  margin-top: 20px;
 }
 .works_wrapper__category {
-  @include mixin.textIcon(14px);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 8px;
 }
-.works_wrapper__name {
-  margin-top: 6px;
-  transition: color var(--transition-config);
+.works_wrapper__category_each {
+  font-family: var(--font-family-en), sans-serif;
+  @include mixin.textIcon(14px);
 }

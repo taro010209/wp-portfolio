@@ -29,7 +29,7 @@
   }
   @media (hover: hover) and (pointer: fine) {
     &:hover {
-      color: var(--color-accent);
+      text-decoration: underline;
     }
   }
 }
@@ -37,10 +37,10 @@
 .footer {
   margin-top: var(--section-margin);
   padding: 30px 0;
-  background-color: var(--color-main);
+  background-color: var(--color-blue);
 }
 .footer__copyright {
   display: block;
   @include mixin.text(12px, 1, center);
-  color: var(--color-base);
+  color: var(--color-white);
 }

@@ -6,6 +6,7 @@
 .section_heading {
   display: flex;
   align-items: center;
+  color: var(--color-blue);
   span {
     &:first-of-type {
       font-family: var(--font-family-en), sans-serif;
